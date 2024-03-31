@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    color: var(--text_color);
+    background-color: var(--bg_color);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins/Poppins-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main_color);
+    border-radius: 5px;
+}
+
+:root {
+    --main_color: red;
+    --bg_color: black;
+    --text_color: white;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    font-size: 18px;
+    background-color: var(--bg_color);
+    z-index: 1;
+    text-align: center;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+}
+
+.logo_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menus {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menus a {
+    color: var(--text_color);
+    text-decoration: none;
+    transition: 0.5s;
+    border: 1.5px solid var(--bg_color);
+    padding: 3px 0px;
+}
+
+.menus .home {
+    border-bottom: 1.5px solid var(--main_color);
+}
+
+.menus a:hover {
+    max-width: 100%;
+    border-bottom: 1.5px solid var(--main_color);
+    padding: 3px 0px;
+}
+
+.sign_in_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_in_btn .btn,
+.home_bg .bg_text .watch_now,
+.send_btn {
+    border: none;
+    color: var(--text_color);
+    padding: 10px 15px;
+    background-color: var(--main_color);
+    border-radius: 10px;
+}
+
+
+/* Home Section */
+
+.home_bg {
+    position: relative;
+}
+
+.home_bg .bg_img img {
+    width: 100%;
+}
+
+.home_bg .bg_text {
+    position: absolute;
+    top: 0;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.home_bg .play {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 22%;
+    margin-right: 10%;
+}
+
+
+/* Movies & Coming_movies*/
+
+.movies,
+.coming_movies {
+    max-width: 80%;
+    margin: auto;
+}
+
+.movies .movies_text h3,
+.coming_movies .coming_movies_text h3 {
+    border-bottom: 1px solid var(--main_color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.movies .movies_menus,
+.coming_movies .coming_movies_menus {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+    gap: 2;
+}
+
+.movies .movies_menus .movies_box,
+.coming_movies .coming_movies_menus .coming_movies_box {
+    margin: auto;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+.movies .movies_menus .movies_box img,
+.coming_movies .coming_movies_menus .coming_movies_box img {
+    width: 200px;
+    height: 300px;
+}
+
+.movies .movies_menus .movies_box:hover,
+.coming_movies .coming_movies_menus .coming_movies_box:hover {
+    transform: scale(1.1);
+}
+
+
+/* Contact Us  */
+
+.contact {
+    max-width: 80%;
+    margin: auto;
+}
+
+.contact_us,
+.email_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email_box {
+    max-width: 25%;
+    margin: auto;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--text_color);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.email_box .email {
+    max-width: 50%;
+    border: none;
+    color: var(--bg_color);
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .social {
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
+
+.logo .social i {
+    padding: 5px;
+    background-color: var(--main_color);
+    border-radius: 50%;
+}
+
+
+/* Footer  */
+
+.footer {
+    display: flex;
+    background-color: var(--main_color);
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .movies .movies_menus,
+    .coming_movies .coming_movies_menus {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .email_box {
+        max-width: 35%;
+    }
+}
+
+@media (max-width: 700px) {
+    .movies .movies_menus,
+    .coming_movies .coming_movies_menus {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .navigation .menus {
+        display: none;
+    }
+    .navigation {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .home_bg .bg_text {
+        position: absolute;
+        top: 0;
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+    .home_bg .play {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5%;
+        margin-right: 10%;
+    }
+    .movies .movies_menus,
+    .coming_movies .coming_movies_menus {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .email_box {
+        max-width: 70%;
+        height: 50px;
+    }
+    .contact .logo {
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 375px) {
+    .bg_text h3 {
+        font-size: 10px;
+    }
+    .bg_text h1 {
+        font-size: 20px;
+    }
+    .bg_text .watch_now {
+        font-size: 10px;
+    }
+    .footer span {
+        text-align: center;
+    }
+}

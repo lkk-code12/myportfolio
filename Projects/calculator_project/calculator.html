@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator With Input</title>
+    <link rel="icon" href="./calculator.png">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div class="display" id="display">0</div>
+        <div class="data" id="data">
+            <label for="firstNumber">First Number</label>
+            <input type="number" name="" id="firstNumber"><br>
+            <span id="fill_first_num">Please fill first number.</span><br>
+            <label for="secondNumber">Second Number</label>
+            <input type="number" name="" id="secondNumber"><br>
+            <span id="fill_second_num">Please fill second number.</span><br>
+            <select name="" id="calculate_option">
+                <option value="default">Choose Options</option>
+                <option value="plus">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="division">/</option>
+            </select><br>
+            <span id="option_warning">Please choose option.</span><br>
+            <button type="button" id="calculate_btn">Calculate</button>
+            <button type="button" id="clear_btn">Clear</button>
+        </div>
+    </div>
+</body>
+<script src="calculator.js"></script>
+
+</html>
